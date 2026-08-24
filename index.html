@@ -6,11 +6,19 @@
     <title>George Dyke</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="George Dyke — online links and profiles.">
+    <meta name="description"
+        content="George Dyke is an Australia-based consultant and software developer working across Earth observation, satellite systems, space data, and the internet.">
     <meta name="robots" content="index, follow">
 
+    <!-- Canonical -->
     <link rel="canonical" href="https://georgedyke.com/">
 
+    <!-- Wordmark font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Basic styling (keep it simple) -->
     <style>
         body {
             margin: 0;
@@ -35,40 +43,184 @@
             outline-offset: 2px;
         }
 
+        .site-header {
+            border-bottom: 1px solid #E7E7E2;
+        }
+
+        .site-header .inner {
+            max-width: 70ch;
+            margin: 0 auto;
+            padding: 1.4rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .lockup {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7em;
+            font-family: Archivo, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: 0.005em;
+            color: #0E6A75;
+        }
+
+        .lockup:hover {
+            text-decoration: none;
+        }
+
+        .lockup svg {
+            width: 1.1em;
+            height: 1.1em;
+            display: block;
+        }
+
         .container {
             max-width: 70ch;
-            padding: 4rem 1.5rem 3.5rem;
+            padding: 3rem 1.5rem 3.5rem;
             margin: 0 auto;
-            text-align: center;
+        }
+
+        /* Keep header and text above the watermark */
+        .site-header,
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-mark {
+            position: fixed;
+            top: 7rem;
+            right: 2rem;
+            width: 15rem;
+            opacity: 0.06;
+            pointer-events: none;
+            user-select: none;
+            z-index: 0;
+        }
+
+        .hero-mark svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Tone it down on small screens */
+        @media (max-width: 700px) {
+            .hero-mark {
+                width: 8rem;
+                top: 6rem;
+                right: 1rem;
+                opacity: 0.05;
+            }
         }
 
         h1 {
+            font-family: Archivo, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
             font-weight: 700;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             line-height: 1.35;
             margin: 0;
+        }
+
+        p {
+            margin: 1.4rem 0 0;
+            text-wrap: pretty;
         }
 
         ul.links {
             list-style: none;
             padding: 0;
-            margin: 2.5rem 0 0;
+            margin: 2.2rem 0 0;
         }
 
         ul.links li {
-            margin: 0.6rem 0;
+            margin: 0.55rem 0;
+        }
+
+        ul.links .what {
+            color: #4C5560;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            margin-top: 4rem;
+            font-size: 0.85rem;
+            color: #4C5560;
+            font-variant-caps: all-small-caps;
+            letter-spacing: 0.03em;
+        }
+
+        footer svg {
+            width: 0.9rem;
+            height: 0.9rem;
+            display: block;
+            margin-bottom: 0.6rem;
         }
     </style>
 </head>
 
 <body>
+    <header class="site-header">
+        <div class="inner">
+            <a class="lockup" href="/">
+                <svg viewBox="-50 -50 100 100" aria-hidden="true" focusable="false">
+                    <path d="M0 -48 C4 -19 19 -4 48 0 C19 4 4 19 0 48 C-4 19 -19 4 -48 0 C-19 -4 -4 -19 0 -48 Z" fill="#0E6A75"></path>
+                </svg>
+                GEORGE&nbsp;DYKE
+            </a>
+        </div>
+    </header>
+
+    <div class="hero-mark" aria-hidden="true">
+        <svg viewBox="0 0 130 150" focusable="false">
+            <g fill="#0E6A75"><path d="M60 103.7 C61.4 113.5 66.5 118.6 76.3 120 C66.5 121.4 61.4 126.5 60 136.3 C58.6 126.5 53.5 121.4 43.7 120 C53.5 118.6 58.6 113.5 60 103.7 Z"></path><path d="M66 15.7 C67.4 25.5 72.5 30.6 82.3 32 C72.5 33.4 67.4 38.5 66 48.3 C64.6 38.5 59.5 33.4 49.7 32 C59.5 30.6 64.6 25.5 66 15.7 Z"></path><path d="M32 57.7 C33.4 67.5 38.5 72.6 48.3 74 C38.5 75.4 33.4 80.5 32 90.3 C30.6 80.5 25.5 75.4 15.7 74 C25.5 72.6 30.6 67.5 32 57.7 Z"></path><path d="M100 47.7 C101.4 57.5 106.5 62.6 116.3 64 C106.5 65.4 101.4 70.5 100 80.3 C98.6 70.5 93.5 65.4 83.7 64 C93.5 62.6 98.6 57.5 100 47.7 Z"></path><path d="M84 87.8 C84.7 92.8 87.2 95.3 92.2 96 C87.2 96.7 84.7 99.2 84 104.2 C83.3 99.2 80.8 96.7 75.8 96 C80.8 95.3 83.3 92.8 84 87.8 Z"></path></g>
+        </svg>
+    </div>
+
     <main class="container">
-        <h1>George Dyke</h1>
+        <h1>Earth observation, satellites, space data &amp; the internet</h1>
+
+        <p>
+            George Dyke is an Australia-based consultant and software developer working across
+            Earth observation, satellite systems, space data, and the internet.
+        </p>
+
+        <p>
+            He leads <a href="https://diamondsky.au" target="_blank" rel="noopener">Diamond Sky</a>,
+            an independent consultancy and software practice supporting space agencies, research
+            organisations, and industry partners around the world.
+        </p>
 
         <ul class="links">
-            <li><a href="https://www.linkedin.com/in/georgedyke/" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="https://twitter.com/georgedyke" target="_blank" rel="noopener">@GeorgeDyke</a></li>
+            <li>
+                <a href="https://diamondsky.au" target="_blank" rel="noopener">Diamond Sky</a>
+                <span class="what">— consultancy &amp; software practice</span>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/georgedyke/" target="_blank" rel="noopener">LinkedIn</a>
+                <span class="what">— professional history</span>
+            </li>
+            <li>
+                <a href="https://twitter.com/georgedyke" target="_blank" rel="noopener">@GeorgeDyke</a>
+                <span class="what">— on X</span>
+            </li>
+            <li>
+                <a href="mailto:george@georgedyke.com">george@georgedyke.com</a>
+                <span class="what">— email</span>
+            </li>
         </ul>
+
+        <footer>
+            <svg viewBox="-50 -50 100 100" aria-hidden="true" focusable="false">
+                <path d="M0 -48 C4 -19 19 -4 48 0 C19 4 4 19 0 48 C-4 19 -19 4 -48 0 C-19 -4 -4 -19 0 -48 Z" fill="#0E6A75"></path>
+            </svg>
+            © George Dyke
+        </footer>
     </main>
 <!-- Cloudflare Web Analytics: paste the snippet for the georgedyke.com site entry here (token pending) -->
 </body>
