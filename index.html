@@ -32,30 +32,42 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "George Dyke",
-      "url": "https://georgedyke.com/",
-      "email": "mailto:george@georgedyke.com",
-      "jobTitle": "Consultant & Software Developer",
-      "description": "Australia-based consultant and software developer working across Earth observation, satellite systems, space data, and the internet.",
-      "homeLocation": { "@type": "Place", "name": "Australia" },
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Diamond Sky Australis Pty Ltd",
-        "alternateName": "Diamond Sky",
-        "url": "https://diamondsky.au/"
-      },
-      "knowsAbout": [
-        "Earth observation",
-        "satellite systems",
-        "space data",
-        "data infrastructure",
-        "EO sector analysis"
-      ],
-      "sameAs": [
-        "https://www.linkedin.com/in/georgedyke/",
-        "https://twitter.com/georgedyke",
-        "https://x.com/georgedyke"
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://georgedyke.com/#person",
+          "name": "George Dyke",
+          "url": "https://georgedyke.com/",
+          "email": "mailto:george@georgedyke.com",
+          "jobTitle": "Consultant & Software Developer",
+          "description": "Australia-based consultant and software developer working across Earth observation, satellite systems, space data, and the internet.",
+          "homeLocation": { "@type": "Place", "name": "Australia" },
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Diamond Sky Australis Pty Ltd",
+            "alternateName": "Diamond Sky",
+            "url": "https://diamondsky.au/"
+          },
+          "knowsAbout": [
+            "Earth observation",
+            "satellite systems",
+            "space data",
+            "data infrastructure",
+            "EO sector analysis"
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/in/georgedyke/",
+            "https://twitter.com/georgedyke",
+            "https://x.com/georgedyke"
+          ]
+        },
+        {
+          "@type": "WebApplication",
+          "name": "CEOS Database",
+          "url": "https://database.eohandbook.com",
+          "description": "The database of Earth observation satellites, instruments, and measurements behind the CEOS EO Handbook and CEOS reporting.",
+          "maintainer": { "@id": "https://georgedyke.com/#person" }
+        }
       ]
     }
     </script>
@@ -228,7 +240,7 @@
             </a>
             <nav>
                 <a href="/" aria-current="page">Home</a>
-                <a href="/publications/">Publications</a>
+                <a href="/publications/">Work &amp; publications</a>
             </nav>
         </div>
     </header>
