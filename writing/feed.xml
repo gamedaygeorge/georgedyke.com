@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>George Dyke — Writing</title>
+    <link>https://georgedyke.com/writing/</link>
+    <atom:link href="https://georgedyke.com/writing/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Writing by George Dyke on Earth observation, satellite systems, space data, and the internet.</description>
+    <language>en</language>
+    <lastBuildDate>Thu, 05 Nov 2026 00:00:00 +1100</lastBuildDate>
+
+    <!-- Newest first. Keep in sync with index.html. -->
+    <item>
+      <title>Hello, world</title>
+      <link>https://georgedyke.com/writing/hello-world/</link>
+      <guid isPermaLink="true">https://georgedyke.com/writing/hello-world/</guid>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +1100</pubDate>
+      <description>A short note on why this section exists and what to expect here.</description>
+    </item>
+  </channel>
+</rss>
