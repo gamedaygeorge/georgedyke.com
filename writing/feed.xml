@@ -4,7 +4,7 @@
     <title>George Dyke — Writing</title>
     <link>https://georgedyke.com/writing/</link>
     <atom:link href="https://georgedyke.com/writing/feed.xml" rel="self" type="application/rss+xml"/>
-    <description>Writing by George Dyke on Earth observation, satellite systems, space data, and the internet.</description>
+    <description>Occasional writing by George Dyke on Earth observation, space, technology, and the systems and policies that shape them.</description>
     <language>en</language>
     <lastBuildDate>Thu, 05 Nov 2026 00:00:00 +1100</lastBuildDate>
 
@@ -14,7 +14,7 @@
       <link>https://georgedyke.com/writing/hello-world/</link>
       <guid isPermaLink="true">https://georgedyke.com/writing/hello-world/</guid>
       <pubDate>Thu, 05 Nov 2026 00:00:00 +1100</pubDate>
-      <description>A short note on why this section exists and what to expect here.</description>
+      <description>An experiment in writing things down, following interesting questions, and occasionally publishing the results.</description>
     </item>
   </channel>
 </rss>
