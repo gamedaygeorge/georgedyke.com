@@ -321,3 +321,84 @@ footer svg {
     display: block;
     margin-bottom: 0.6rem;
 }
+
+/* Writing filters */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.filters {
+    margin-top: 2rem;
+}
+
+.filters .search input {
+    box-sizing: border-box;
+    width: 100%;
+    font: inherit;
+    font-size: 0.95rem;
+    padding: 0.5rem 0.7rem;
+    border: 1px solid #D5D7D2;
+    border-radius: 4px;
+    background: #fff;
+    color: inherit;
+}
+
+.filters .search input:focus-visible {
+    border-color: #0E6A75;
+}
+
+ul.tags {
+    list-style: none;
+    padding: 0;
+    margin: 0.8rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.5rem;
+    font-size: 0.85rem;
+}
+
+ul.tags a,
+a.tag {
+    display: inline-block;
+    padding: 0.1rem 0.55rem;
+    border: 1px solid #D5D7D2;
+    border-radius: 999px;
+    color: #4C5560;
+    line-height: 1.5;
+}
+
+ul.tags a:hover,
+a.tag:hover {
+    text-decoration: none;
+    border-color: #0E6A75;
+    color: #0E6A75;
+}
+
+ul.tags a[aria-current="true"] {
+    background: #0E6A75;
+    border-color: #0E6A75;
+    color: #fff;
+}
+
+a.tag {
+    font-size: 0.8rem;
+    padding: 0 0.5rem;
+    vertical-align: 0.1em;
+}
+
+.filter-status {
+    margin: 0.6rem 0 0;
+    color: #4C5560;
+    font-size: 0.85rem;
+    min-height: 1.4em;
+}
+
+ul.posts + .note {
+    margin-top: 2.2rem;
+}

@@ -84,14 +84,28 @@
             presentations. <a href="/writing/feed.xml">RSS</a>
         </p>
 
-        <ul class="posts">
-            <!-- Newest first. Keep in sync with feed.xml. -->
-            <li>
+        <div class="filters" hidden>
+            <label class="search">
+                <span class="visually-hidden">Search writing</span>
+                <input type="search" id="q" placeholder="Search titles, summaries, tags&hellip;" autocomplete="off">
+            </label>
+            <ul class="tags" id="tags" aria-label="Filter by tag"></ul>
+            <p class="filter-status" id="status" aria-live="polite"></p>
+        </div>
+
+        <ul class="posts" id="posts">
+            <!-- Newest first. Keep in sync with feed.xml. Tags: space-separated slugs in data-tags. -->
+            <li data-tags="site">
                 <a class="title" href="/writing/hello-world/">Hello, world</a>
-                <span class="meta"><time datetime="2026-11-05">5 November 2026</time></span>
+                <span class="meta">
+                    <time datetime="2026-11-05">5 November 2026</time>
+                    · <a class="tag" href="/writing/?tag=site">site</a>
+                </span>
                 <span class="summary">An experiment in writing things down, following interesting questions, and occasionally publishing the results.</span>
             </li>
         </ul>
+
+        <p class="note" id="empty" hidden>Nothing matches. <a href="/writing/">Clear filters</a>.</p>
 
         <footer>
             <svg viewBox="-50 -50 100 100" aria-hidden="true" focusable="false">
@@ -100,6 +114,91 @@
             © George Dyke
         </footer>
     </main>
+<script>
+    (function () {
+        var posts = Array.prototype.slice.call(document.querySelectorAll('#posts > li'));
+        if (!posts.length) return;
+
+        var filters = document.querySelector('.filters');
+        var input = document.getElementById('q');
+        var tagList = document.getElementById('tags');
+        var status = document.getElementById('status');
+        var empty = document.getElementById('empty');
+
+        // Collect tags from the entries so the list never drifts from the posts.
+        var counts = {};
+        posts.forEach(function (li) {
+            (li.dataset.tags || '').split(/\s+/).filter(Boolean).forEach(function (t) {
+                counts[t] = (counts[t] || 0) + 1;
+            });
+        });
+        var tags = Object.keys(counts).sort();
+
+        var allLi = document.createElement('li');
+        allLi.innerHTML = '<a href="/writing/" data-tag="">All</a>';
+        tagList.appendChild(allLi);
+        tags.forEach(function (t) {
+            var li = document.createElement('li');
+            li.innerHTML = '<a href="/writing/?tag=' + encodeURIComponent(t) + '" data-tag="' + t + '">' + t + '</a>';
+            tagList.appendChild(li);
+        });
+
+        var state = { tag: '', q: '' };
+
+        function apply() {
+            var q = state.q.trim().toLowerCase();
+            var shown = 0;
+            posts.forEach(function (li) {
+                var tagsOf = (li.dataset.tags || '').split(/\s+/);
+                var text = li.textContent.toLowerCase() + ' ' + tagsOf.join(' ');
+                var ok = (!state.tag || tagsOf.indexOf(state.tag) !== -1) && (!q || text.indexOf(q) !== -1);
+                li.hidden = !ok;
+                if (ok) shown++;
+            });
+            tagList.querySelectorAll('a').forEach(function (a) {
+                if (a.dataset.tag === state.tag) a.setAttribute('aria-current', 'true');
+                else a.removeAttribute('aria-current');
+            });
+            empty.hidden = shown > 0;
+            status.textContent = (state.tag || q)
+                ? shown + (shown === 1 ? ' piece' : ' pieces') + (state.tag ? ' tagged \u201c' + state.tag + '\u201d' : '') + (q ? ' matching \u201c' + state.q.trim() + '\u201d' : '')
+                : '';
+            var url = '/writing/' + (state.tag ? '?tag=' + encodeURIComponent(state.tag) : '');
+            if (location.pathname + location.search !== url) history.replaceState(null, '', url);
+        }
+
+        function readUrl() {
+            var params = new URLSearchParams(location.search);
+            state.tag = params.get('tag') || '';
+            if (state.tag && tags.indexOf(state.tag) === -1) state.tag = '';
+        }
+
+        tagList.addEventListener('click', function (e) {
+            var a = e.target.closest('a[data-tag]');
+            if (!a) return;
+            e.preventDefault();
+            state.tag = a.dataset.tag;
+            apply();
+        });
+        document.getElementById('posts').addEventListener('click', function (e) {
+            var a = e.target.closest('a.tag');
+            if (!a) return;
+            e.preventDefault();
+            state.tag = new URL(a.href).searchParams.get('tag') || '';
+            apply();
+            filters.scrollIntoView({ block: 'nearest' });
+        });
+        input.addEventListener('input', function () {
+            state.q = input.value;
+            apply();
+        });
+        window.addEventListener('popstate', function () { readUrl(); apply(); });
+
+        readUrl();
+        filters.hidden = false;
+        apply();
+    })();
+</script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c4d948224bc54eba8bc212570ffcdeda"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 
