@@ -6,9 +6,19 @@
     <atom:link href="https://georgedyke.com/writing/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Occasional writing by George Dyke on Earth observation, space, technology, and the systems and policies that shape them.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 00:00:00 +1100</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 00:00:00 +1100</lastBuildDate>
 
     <!-- Newest first. Keep in sync with index.html. -->
+    <item>
+      <title>Data centres in space: the bigger question for Earth observation</title>
+      <link>https://georgedyke.com/writing/data-centres-in-space/</link>
+      <guid isPermaLink="true">https://georgedyke.com/writing/data-centres-in-space/</guid>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 +1100</pubDate>
+      <category>aeo-forum-2026</category>
+      <category>earth-observation</category>
+      <category>space-infrastructure</category>
+      <description>What might the pursuit of orbital computing mean for Earth observation, whether or not orbital data centres succeed as a business?</description>
+    </item>
     <item>
       <title>Hello, world</title>
       <link>https://georgedyke.com/writing/hello-world/</link>

@@ -18,6 +18,9 @@ Lowercase hyphenated slugs, added as needed. The filter list on `/writing/` is b
 is a linkable filtered view. Keep the set small and reuse before inventing. In use so far:
 
 - `site` — notes about this site itself
+- `aeo-forum-2026` — companion pieces to talks at the Advancing Earth Observation Forum 2026, Hobart
+- `earth-observation` — EO sector, systems and policy
+- `space-infrastructure` — orbital computing, communications and shared platforms
 
 ## Conventions
 
