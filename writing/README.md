@@ -21,6 +21,7 @@ is a linkable filtered view. Keep the set small and reuse before inventing. In u
 - `aeo-forum-2026` — companion pieces to talks at the Advancing Earth Observation Forum 2026, Hobart
 - `earth-observation` — EO sector, systems and policy
 - `space-infrastructure` — orbital computing, communications and shared platforms
+- `data-continuity` — continuity and security of EO data supply (CEODA)
 
 ## Conventions
 

@@ -402,3 +402,15 @@ a.tag {
 ul.posts + .note {
     margin-top: 2.2rem;
 }
+
+/* Small inline figure (e.g. a report cover) */
+article figure.small {
+    max-width: 14rem;
+}
+
+article .brief {
+    padding: 1rem 1.2rem;
+    background: #F1F1EC;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
