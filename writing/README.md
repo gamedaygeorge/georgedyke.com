@@ -22,6 +22,7 @@ is a linkable filtered view. Keep the set small and reuse before inventing. In u
 - `earth-observation` — EO sector, systems and policy
 - `space-infrastructure` — orbital computing, communications and shared platforms
 - `data-continuity` — continuity and security of EO data supply (CEODA)
+- `ceos-database` — the CEOS MIM Database, EO Capabilities Explorer and API
 
 ## Conventions
 
