@@ -104,17 +104,16 @@
             </p>
 
             <p class="lede">
-                Earth observation starts with satellites and instruments upstream, and produces data and
-                products that support applications and decisions downstream. The
+                The Earth observation value chain starts with measurement upstream, and these measurements
+                produce data and products that support applications and decisions downstream. The
                 <a href="https://ceos-capabilities.org/" target="_blank" rel="noopener">CEOS EO Capabilities
-                Explorer</a> seeks to help people explore those connections, whether they start with a
-                satellite or a question they need to answer.
+                Explorer</a> seeks to help people explore connections.
             </p>
 
             <p>
-                It builds on the CEOS Missions, Instruments and Measurements (MIM) Database, with an open API
-                for other applications to use. I think of this as giving the database a &ldquo;day job&rdquo;,
-                moving towards putting a longstanding reference to work in everyday EO workflows.
+                The Explorer builds on the CEOS Missions, Instruments and Measurements (MIM) Database, via its
+                open API. This API is part of giving the Database a &ldquo;day job&rdquo;, moving towards
+                putting a longstanding reference to work.
             </p>
 
             <p>
@@ -129,13 +128,13 @@
 
             <p>
                 ESA&rsquo;s support for the <a href="https://eohandbook.com/" target="_blank"
-                    rel="noopener">CEOS Earth Observation Handbook</a> stretches back to the 1990s. In 2007, a
-                web database was added, and I have built and maintained that since.
+                    rel="noopener">CEOS Earth Observation Handbook</a> stretches back to the 1990s, with the
+                Database being added in 2007.
             </p>
 
             <p>
-                The 2026 extension is supported through pilot activities under Australia&rsquo;s CEOS Chair
-                year, led by Geoscience Australia. The familiar
+                2026 extension work has added the API and Explorer as pilot activities under Australia&rsquo;s
+                CEOS Chair year, supported by Geoscience Australia. The familiar
                 <a href="https://database.eohandbook.com/" target="_blank" rel="noopener">CEOS Database</a>
                 remains in place, while the Explorer and API offer new ways to use its information.
             </p>
@@ -145,7 +144,7 @@
             <ul>
                 <li><strong>Missions, instruments and measurements.</strong> Search the
                     <a href="https://ceos-capabilities.org/missions" target="_blank" rel="noopener">mission
-                        index</a>, then follow the links to instruments and what they measure. The
+                        index</a>, then follow the links to instruments and their measurements. The
                     <a href="https://ceos-capabilities.org/features/mission-pages" target="_blank"
                         rel="noopener">mission</a>,
                     <a href="https://ceos-capabilities.org/features/instrument-pages" target="_blank"
@@ -153,10 +152,10 @@
                     <a href="https://ceos-capabilities.org/features/measurements" target="_blank"
                         rel="noopener">measurement</a> guides explain what each record contains.</li>
                 <li><strong>Constellations and commercial missions.</strong> Coverage now includes selected
-                    commercial civil EO systems, with
+                    commercial civil EO systems, including
                     <a href="https://ceos-capabilities.org/features/constellations" target="_blank"
-                        rel="noopener">constellation records</a> linking programs to their spacecraft. While the
-                    database is not yet complete, commercial coverage is growing.</li>
+                        rel="noopener">constellation records</a> which link programs to their spacecraft.
+                    Commercial records continue to be added to fill out the collection.</li>
                 <li><strong>The bigger picture.</strong>
                     <a href="https://ceos-capabilities.org/features/at-a-glance" target="_blank"
                         rel="noopener">At a Glance</a> gives an overview, the
@@ -169,8 +168,7 @@
             <figure>
                 <img src="/writing/ceos-database-day-job/explorer-home.jpg" width="1400" height="609"
                     alt="Screenshot of the CEOS EO Capabilities Explorer home page.">
-                <figcaption>The Explorer home page, from the AEO presentation. Counts and dates are a snapshot,
-                    not fixed totals.</figcaption>
+                <figcaption>The Explorer home page.</figcaption>
             </figure>
 
             <h2>Look more closely</h2>
@@ -178,30 +176,30 @@
             <ul>
                 <li><strong>Identifiers.</strong>
                     <a href="https://database.eohandbook.com/identifiers.aspx" target="_blank"
-                        rel="noopener">Canonical identifiers</a> help software recognise the same record despite
+                        rel="noopener">Canonical identifiers</a> help recognise records which may have
                     different names or aliases, and they can be browsed in the
                     <a href="https://database.eohandbook.com/database/identifiertable.aspx" target="_blank"
-                        rel="noopener">identifier table</a>. This information can be accessed via the API.</li>
-                <li><strong>A possible STAC connection.</strong> A
+                        rel="noopener">identifier table</a>. This information can also be accessed via the
+                    API.</li>
+                <li><strong>Possible jobs.</strong> A
                     <a href="https://database.eohandbook.com/identifiers.aspx" target="_blank"
                         rel="noopener">tentative mapping</a> links the proposed identifier classes, database
-                    records, and STAC common metadata field. For example, Database Mission to STAC platform,
-                    and Series to constellation. This is an idea based on some initial discussions, and
-                    something to be worked on.</li>
+                    records, and STAC common metadata fields.</li>
                 <li><strong>Technical detail for CEOS-ARD.</strong> The
                     <a href="https://ceos-capabilities.org/features/sar-parameters" target="_blank"
-                        rel="noopener">SAR parameters pilot</a> adds frequency, bandwidth, polarisation and
+                        rel="noopener">SAR parameters pilot</a> adds frequency, bandwidth, polarisation, and
                     imaging-mode details such as resolution, swath and incidence range, for example with
                     <a href="https://ceos-capabilities.org/instrument/1589" target="_blank"
-                        rel="noopener">PALSAR-2</a>. These records can help inform CEOS-ARD work.</li>
+                        rel="noopener">PALSAR-2</a>. These records can help inform data production and CEOS-ARD
+                    work.</li>
                 <li><strong>Quality reports.</strong> Mission and product pages link to selected
                     <a href="https://ceos-capabilities.org/features/quality-assessments" target="_blank"
                         rel="noopener">USGS and ESA data quality assessments</a>.</li>
-                <li><strong>Satellite pictures.</strong> The
+                <li><strong>Satellite visuals.</strong> The
                     <a href="https://github.com/ceos-capabilities/satellite-visuals" target="_blank"
                         rel="noopener">satellite-visuals collection</a> brings together spacecraft illustrations,
-                    silhouettes and photographs for communicating about the observing system. Third-party images
-                    retain their owners&rsquo; terms, with credits in a per-file attribution ledger; the
+                    silhouettes and photographs to help communicate the physical aspects of the observing
+                    system. The
                     <a href="https://ceos-capabilities.org/features/satellite-visuals" target="_blank"
                         rel="noopener">imagery guide</a> explains the approach.</li>
             </ul>
@@ -209,13 +207,14 @@
             <h2>Make your own view</h2>
 
             <ul>
-                <li><strong>Custom timelines.</strong> Choose missions individually or by agency, instrument
-                    type, measurement or theme, then add your own assumptions and annotations.
+                <li><strong>Custom timelines.</strong> Create your own timeline, choosing missions
+                    individually or by agency, instrument type, measurement or theme, then add your own
+                    assumptions and annotations.
                     <a href="https://ceos-capabilities.org/view/custom:blank" target="_blank"
-                        rel="noopener">Build a timeline</a> and share it by URL, export PNG or CSV, or save and
-                    load JSON; the
+                        rel="noopener">Build a timeline</a> and share it by URL, export, or save and load JSON.
+                    See the
                     <a href="https://ceos-capabilities.org/features/custom-timelines" target="_blank"
-                        rel="noopener">timeline guide</a> covers the options.</li>
+                        rel="noopener">timeline guide</a>.</li>
                 <li><strong>Instrument builder.</strong> Describe a proposed sensor or edit a copy of an
                     existing record, then view it on the spectrum and share it by link or JSON. The
                     <a href="https://ceos-capabilities.org/custom/instrument" target="_blank"
@@ -313,14 +312,6 @@
                 We want to make it easier to move between upstream observing systems, data and products, and
                 downstream applications &ndash; and back again. Product links and thematic views are a start; a
                 complete provenance chain and database write access are future work.
-            </p>
-
-            <p>
-                The shared database and API are the foundation, and the Explorer is one application of them.
-                Try it with a question from your work, and tell us what would make it more useful through the
-                <a href="https://ceos-capabilities.org/about" target="_blank" rel="noopener">website&rsquo;s
-                    feedback link</a> or
-                <a href="mailto:support@ceos-capabilities.org">support@ceos-capabilities.org</a>.
             </p>
 
             <nav class="post-nav">
