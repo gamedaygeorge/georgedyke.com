@@ -6,14 +6,14 @@
     <atom:link href="https://georgedyke.com/writing/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Occasional writing by George Dyke on Earth observation, space, technology, and the systems and policies that shape them.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Nov 2026 00:00:00 +1100</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 00:00:00 +1100</lastBuildDate>
 
     <!-- Newest first. Keep in sync with index.html. -->
     <item>
       <title>Data centres in space: the bigger question for Earth observation</title>
       <link>https://georgedyke.com/writing/data-centres-in-space/</link>
       <guid isPermaLink="true">https://georgedyke.com/writing/data-centres-in-space/</guid>
-      <pubDate>Fri, 06 Nov 2026 00:00:00 +1100</pubDate>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +1100</pubDate>
       <category>aeo-forum-2026</category>
       <category>earth-observation</category>
       <category>space-infrastructure</category>
@@ -23,7 +23,7 @@
       <title>Australia’s EO data continuity risks, two years on</title>
       <link>https://georgedyke.com/writing/eo-data-continuity-revisited/</link>
       <guid isPermaLink="true">https://georgedyke.com/writing/eo-data-continuity-revisited/</guid>
-      <pubDate>Fri, 06 Nov 2026 00:00:00 +1100</pubDate>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +1100</pubDate>
       <category>aeo-forum-2026</category>
       <category>earth-observation</category>
       <category>data-continuity</category>
@@ -33,7 +33,7 @@
       <title>Giving the CEOS Database a day job</title>
       <link>https://georgedyke.com/writing/ceos-database-day-job/</link>
       <guid isPermaLink="true">https://georgedyke.com/writing/ceos-database-day-job/</guid>
-      <pubDate>Fri, 06 Nov 2026 00:00:00 +1100</pubDate>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +1100</pubDate>
       <category>aeo-forum-2026</category>
       <category>ceos-database</category>
       <category>earth-observation</category>
