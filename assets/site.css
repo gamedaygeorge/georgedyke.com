@@ -268,6 +268,11 @@ article figcaption {
     font-size: 0.9rem;
 }
 
+article figure.caption-centred figcaption {
+    font-style: italic;
+    text-align: center;
+}
+
 article hr {
     border: 0;
     border-top: 1px solid #E7E7E2;
